@@ -10,7 +10,9 @@ def menu():
 
 def agregarlibro():
     while True:
-        nombre_libro = input("Nombre del libro a agregar: ")
+        nombre_libro = input("Nombre del libro a agregar(escribe 'salir' para volver al menu): ")
+        if nombre_libro.lower() == "salir":
+            return
         if nombre_libro == "" or len(nombre_libro) < 4:
             print("Nombre no valido, ingresa uno valido")
         else:
@@ -28,7 +30,9 @@ def agregarlibro():
             print("Año no valido, ingresa uno valido")
 
     while True:
-        autor = input("Autor del libro a agregar: ")
+        autor = input("Autor del libro a agregar(escribe 'salir' para volver al menu): ")
+        if autor.lower() == "salir":
+            return
         if autor == "" or len(autor) < 7:
             print("Autor no valido, ingresa uno valido")
         else:
@@ -64,8 +68,10 @@ def verlibros():
             print()
 
 def buscarlibro():
-    buscar = input("Escribe el libro a buscar: ").lower()
+    buscar = input("Escribe el libro a buscar(escribe 'salir' para volver al menu): ").lower()
     encontrado = False
+    if buscar == "salir":
+        return
     if buscar == "":
         print("No se puede buscar un libro vacio")
     else:
@@ -84,8 +90,10 @@ def buscarlibro():
             print("El libro no esta registrado")
 
 def prestarlibro():
-    buscar = input("Escribe el libro a prestar: ").lower()
+    buscar = input("Escribe el libro a prestar(escribe 'salir' para volver al menu): ").lower()
     encontrado = False
+    if buscar == "salir":
+        return
     if buscar == "":
         print("No se puede prestar un libro vacio")
     else:
@@ -103,8 +111,10 @@ def prestarlibro():
 
 
 def devolverlibro():
-    buscar = input("Escribe el libro a devolver: ").lower()
+    buscar = input("Escribe el libro a devolver(escribe 'salir' para volver al menu): ").lower()
     encontrado = False
+    if buscar == "salir":
+        return
     if buscar == "":
             print("No se puede devolver un libro vacio")
     else:
@@ -121,8 +131,10 @@ def devolverlibro():
             print("El libro no esta registrado")
 
 def eliminarlibro():
-    buscar = input("Escribe el libro a eliminar: ").lower()
-    encontrado = False 
+    buscar = input("Escribe el libro a eliminar(escribe 'salir' para volver al menu): ").lower()
+    encontrado = False
+    if buscar == "salir":
+        return
     if buscar == "":
             print("No se puede eliminar un libro vacio")
     else:
